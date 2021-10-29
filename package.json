@@ -1,8 +1,12 @@
 {
-  "name": "nmsm-design-system-sample",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@nolmungshemung/nmsm-design-system-sample",
+  "version": "0.0.6",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/nolmungshemung/nmsm-design-system-sample.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "akariyan <fntlsltm@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -19,6 +23,8 @@
     "@types/react-dom": "^17.0.10"
   },
   "scripts": {
-    "start": "parcel ./public/index.html -d build"
+    "start": "parcel ./public/index.html -d build",
+    "build": "tsc",
+    "prepare": "npm run-script build"
   }
 }

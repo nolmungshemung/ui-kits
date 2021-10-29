@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 
-const mountNode = document.getElementById("root");
-ReactDOM.render(<App />, mountNode);
+export { default as DefaultButton } from "./components/buttons/DefaultButton";
+export { default as InputGroup } from "./components/inputs/InputGroup";
