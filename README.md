@@ -159,10 +159,18 @@ import { styled } from "path-to/stitches.config"
 
 ## github package로 배포하기
 1. 배포하려는 컴포넌트를 [index.tsx]에서 재정의
-   : export { default as DefaultButton } from "./components/buttons/DefaultButton";
-     export { default as InputGroup } from "./components/inputs/InputGroup";
+```
+export { default as DefaultButton } from "./components/buttons/DefaultButton";
+export { default as InputGroup } from "./components/inputs/InputGroup";
+```
+
 2. [.npmignore]에 배포때 제외할 디렉토리, 파일을 추가
+```
+
+```
+
 3. [.tsconfig] 추가 설정
+```
     {
   "compilerOptions": {  
     "target": "es5",  
@@ -180,37 +188,57 @@ import { styled } from "path-to/stitches.config"
   "exclude": ["node_modules"]
    }
 
-   "declaration": 자동완성을 위한 .d.ts 파일 생성
-   "outDir": 컴파일 결과 출력 출력 경로
-   "rootDir": root 경로
-   "include": 컴파일 대상 경로
-   "exclude": 컴파일 제외 경로
+```
+- "declaration": 자동완성을 위한 .d.ts 파일 생성
+- "outDir": 컴파일 결과 출력 출력 경로
+- "rootDir": root 경로
+- "include": 컴파일 대상 경로
+- "exclude": 컴파일 제외 경로
 
 3. [.npmrc]에 github에서 생성한 personal access token 입력
-   : https://github.com/settings/tokens/new 에서 write:packages로 발급
-   //npm.pkg.github.com/:_authToken=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 형태로 입력
-   > 현재는 조직 단위 토큰이 없어서 조직에 접근권한이 있는 사용자의 PAT로 대체해야한다고함
+
+: https://github.com/settings/tokens/new 에서 write:packages로 발급(현재는 조직 단위 토큰이 없어서 조직에 접근권한이 있는 사용자의 PAT로 대체해야한다고함)
+```
+//npm.pkg.github.com/:_authToken=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+```
+
 4. [package.json] 수정
-   - name : @조직명/패키지명 https://github.com/nolmungshemung/nmsm-design-system-sample 에서 nolmungshemung 부분
-   - main : 트랜스파일결과 메인파일(build/index.js)
-   - types : 자동완성용 d.ts파일(build/index.d.ts)
-   - publishConfig : {
+```
+- name : @조직명/패키지명 https://github.com/nolmungshemung/nmsm-design-system-sample 에서 nolmungshemung 부분
+- main : 트랜스파일결과 메인파일(build/index.js)
+- types : 자동완성용 d.ts파일(build/index.d.ts)
+- publishConfig : {
          "registry": "https://npm.pkg.github.com/"
       }
-   - version : 배포시마다 변경해줘야함
+- version : 배포시마다 변경해줘야함
+```
+
 5. [package.json]에서 scripts 추가
-   : "build": "tsc",
-     "prepare": "npm run-script build"
-6. npm publish로 배포
+```
+"build": "tsc",
+"prepare": "npm run-script build"
+```
+6. 배포
+```
+npm publish
+```
 
 ## 다른 프로젝트에서 사용하기
-1. [.npmrc] 생성해서 내용 추가
-   : //npm.pkg.github.com/:_authToken=해당 조직 or 저장소에 접근 가능한 유저의 PAT 값
+1. [.npmrc] 생성해서 내용 추가 : //npm.pkg.github.com/:_authToken=해당 조직 or 저장소에 접근 가능한 유저의 PAT 값
+```
    조직명 or 유저명:registry=https://npm.pkg.github.com/
    -> 해당 조직 or 유저의 저장소는 github가서 찾으라는 우회경로 
-2. npm install @nolmungshemung/nmsm-design-system-sample
+```
+
+2. 패키지 가져오기
+```
+npm install @nolmungshemung/nmsm-design-system-sample
+```
+
 3. 사용하려는 컴포넌트에선 다음과 같이 사용
+```
    import {
   DefaultButton,
   InputGroup,
 } from "@nolmungshemung/nmsm-design-system-sample";
+```
