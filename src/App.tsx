@@ -1,15 +1,15 @@
-import React from "react";
-import DefaultButton from "./components/buttons/DefaultButton";
-import InputGroup from "./components/inputs/InputGroup";
+import React from 'react';
+import DefaultButton from './components/buttons/DefaultButton';
+import InputGroup from './components/inputs/InputGroup';
 
 function App() {
-  const msg: string = "test";
+  const msg = 'test';
   return (
     <div>
       Hello Jane from {msg}
       <p />
       <p />
-      <DefaultButton onClick={() => alert("hello button!")}>
+      <DefaultButton onClick={() => alert('hello button!')}>
         테스트
       </DefaultButton>
       <p />
