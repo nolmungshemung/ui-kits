@@ -1,14 +1,14 @@
-import React, { InputHTMLAttributes } from "react";
-import { styled } from "../../stitches.config";
+import React, { InputHTMLAttributes } from 'react';
+import { styled } from '../../stitches.config';
 
-const StyledInput = styled("input", {
-  width: "80%",
-  height: "4vh",
-  fontSize: "0.7em",
+const StyledInput = styled('input', {
+  width: '80%',
+  height: '4vh',
+  fontSize: '0.7em',
   variants: {},
 });
 
-interface InputGroupProps extends InputHTMLAttributes<HTMLInputElement> {}
+type InputGroupProps = InputHTMLAttributes<HTMLInputElement>;
 
 function Text(props: InputGroupProps) {
   return <StyledInput {...props} />;
