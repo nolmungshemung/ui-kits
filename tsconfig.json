@@ -7,13 +7,7 @@
     "forceConsistentCasingInFileNames": true,         
     "strict": true,  
     "skipLibCheck": true,
-    
-    /* 
-    storybook test code에서 ts(4082) error 발생하여 지움
-    https://forum.vuejs.org/t/default-export-of-the-module-has-or-is-using-private-name-vueconstructor/19624/4
-    */
-    // "declaration": true,
-    
+    "declaration": true,
     "outDir": "./dist",
     "rootDir": "./src"
   },
