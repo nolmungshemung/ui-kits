@@ -1,0 +1,19 @@
+name: Version Patch
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  version-patch:
+    runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          token: ${{secrets.NMSM_CICD_TOKEN}}
+      - run: git config --global user.email 'nmsm@dev.com'
+      - run: git config --global user.name 'NMSM CICD'
+      - run: npm version patch -m "[RELEASE] %s"
+      - run: git push

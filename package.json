@@ -1,13 +1,13 @@
 {
-  "name": "@nolmungshemung/nmsm-design-system-sample",
-  "version": "0.0.6",
+  "name": "@nolmungshemung/ui-kits",
+  "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/nolmungshemung/nmsm-design-system-sample.git",
+  "repository": "https://github.com/nolmungshemung/ui-kits.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "author": "akariyan <fntlsltm@gmail.com>",
+  "author": "NMSM <nmsm@dev.com>",
   "license": "MIT",
   "dependencies": {
     "@stitches/react": "^1.2.5",
@@ -39,8 +39,8 @@
   },
   "scripts": {
     "start": "parcel ./public/index.html -d build",
-    "build": "tsc",
-    "prepare": "npm run-script build",
+    "compile": "tsc",
+    "prepare": "npm run-script compile",
     "lint": "eslint \"./src/**/*.{ts,tsx,js,jsx}\" --ignore-path .eslintignore || true",
     "lint:fix": "eslint --fix \"./src/**/*.{ts,tsx,js,jsx}\" --ignore-path .eslintignore || true",
     "prettier": "prettier --write --config ./.prettierrc \"./src/**/*.{ts,tsx,js,jsx}\" || true",
