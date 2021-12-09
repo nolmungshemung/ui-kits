@@ -1,4 +1,4 @@
-import { createStitches } from '@stitches/react';
+import { createStitches, CSS } from '@stitches/react';
 
 export const { styled, css, getCssText } = createStitches({
   media: {
@@ -21,3 +21,7 @@ export const { styled, css, getCssText } = createStitches({
     },
   },
 });
+
+export type StitchesProps<
+  T extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>,
+> = CSS & React.ComponentProps<T>;
