@@ -7,7 +7,7 @@ export default {
   component: DefaultButton,
 } as ComponentMeta<typeof DefaultButton>;
 
-const Template: ComponentStory<typeof DefaultButton> = (args) => (
+const Template: ComponentStory<any> = (args) => (
   <DefaultButton {...args}>{'TEST'}</DefaultButton>
 );
 
