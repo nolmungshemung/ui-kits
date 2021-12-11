@@ -1,6 +1,5 @@
 import React from 'react';
-import DefaultButton from './components/buttons/DefaultButton';
-import InputGroup from './components/inputs/InputGroup';
+import { Button } from './components/atoms';
 
 function App() {
   const msg = 'test';
@@ -9,12 +8,9 @@ function App() {
       Hello Jane from {msg}
       <p />
       <p />
-      <DefaultButton onClick={() => alert('hello button!')}>
+      <Button as="div" onClick={() => alert('hello button!')}>
         테스트
-      </DefaultButton>
-      <p />
-      <InputGroup.Number />
-      <p />
+      </Button>
     </div>
   );
 }
