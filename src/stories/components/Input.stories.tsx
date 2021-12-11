@@ -1,29 +1,25 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import InputGroup from '../../components/inputs/InputGroup';
+import { Input } from '../../components/atoms';
 
 export default {
   title: 'Test/Input',
-} as ComponentMeta<typeof InputGroup.Text>;
+} as ComponentMeta<typeof Input.Text>;
 
-const TextTemplate: ComponentStory<any> = (args) => (
-  <InputGroup.Text {...args} />
-);
+const TextTemplate: ComponentStory<any> = (args) => <Input.Text {...args} />;
 export const Text = TextTemplate.bind({});
 Text.args = {
   placeholder: 'input text',
 };
 
 const NumberTemplate: ComponentStory<any> = (args) => (
-  <InputGroup.Number {...args} />
+  <Input.Number {...args} />
 );
 export const Number = NumberTemplate.bind({});
 Number.args = {
   placeholder: 'input only number',
 };
 
-const RadioTemplate: ComponentStory<any> = (args) => (
-  <InputGroup.Radio {...args} />
-);
+const RadioTemplate: ComponentStory<any> = (args) => <Input.Radio {...args} />;
 export const Radio = RadioTemplate.bind({});
 Radio.args = {};
