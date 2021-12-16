@@ -2,10 +2,9 @@
 name: 'Chromatic Deployment'
 
 # Event for the workflow
-on: 
+on:
   push:
-    branches:
-      - main
+    branch-ignore: main
 
 # List of jobs
 jobs:
