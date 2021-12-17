@@ -4,7 +4,7 @@ name: 'Chromatic Deployment'
 # Event for the workflow
 on:
   push:
-    branch-ignore: main
+    branches-ignore: main
 
 # List of jobs
 jobs:
