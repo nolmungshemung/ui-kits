@@ -7,12 +7,19 @@ export default {
   component: Text,
 } as ComponentMeta<typeof Text>;
 
-const Template: ComponentStory<any> = (args) => (
-  <Text {...args}>{args.children}</Text>
-);
+const Template: ComponentStory<any> = (args) => <Text {...args}>{'Text'}</Text>;
 
 export const Default = Template.bind({});
-Default.args = { children: 'test' };
+Default.args = {};
 
-export const Korean = Template.bind({});
-Korean.args = { children: '테스트' };
+export const Size = Template.bind({});
+Size.args = { size: 'xl' };
+
+export const Color = Template.bind({});
+Color.args = { color: 'gray' };
+
+export const Bold = Template.bind({});
+Bold.args = { weight: 'bold' };
+
+export const CustomCSS = Template.bind({});
+CustomCSS.args = { css: { color: '#3498db', fontSize: '30px' } };
