@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { Input } from '../../components/atoms';
+import Input from './Input';
 
 export default {
-  title: 'Test/Input',
+  title: 'Atoms/Input',
 } as ComponentMeta<typeof Input.Text>;
 
 const TextTemplate: ComponentStory<any> = (args) => <Input.Text {...args} />;
