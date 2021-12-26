@@ -2,23 +2,15 @@ import { createStitches, CSS } from '@stitches/react';
 
 export const { styled, css, getCssText } = createStitches({
   media: {
-    mobile_m: '(min-width: 375px)',
-    mobile_l: '(min-width: 425px)',
-    tablet: '(min-width: 768px)',
-    pc: '(min-width: 1024px)',
+    xs: '(min-width: 320px)',
+    sm: '(min-width: 540px)',
+    md: '(min-width: 720px)',
+    lg: '(min-width: 960px)',
+    xl: '(min-width: 1140px)',
+    xxl: '(min-width: 1280px)',
   },
   theme: {
-    colors: {
-      black: '#000000',
-      white: '#FFFFFF',
-      red: '#ff0000',
-      yellow: '#ffff00',
-      green: '#008000',
-      greenYellow: '#ADFF2F',
-      mint: '#BDFCC9',
-      s_CyanBlue: '#3498db',
-      greenCyan: '#2ecc71',
-    },
+    colors: {},
   },
 });
 
