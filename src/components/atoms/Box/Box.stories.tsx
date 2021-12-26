@@ -1,14 +1,14 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { Button } from '../../components/atoms';
+import Box from './Box';
 
 export default {
-  title: 'Test/Button',
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: 'Atoms/Box',
+  component: Box,
+} as ComponentMeta<typeof Box>;
 
 const Template: ComponentStory<any> = (args) => (
-  <Button {...args}>{'TEST'}</Button>
+  <Box {...args}>{'Box Component'}</Box>
 );
 
 export const Default = Template.bind({});
