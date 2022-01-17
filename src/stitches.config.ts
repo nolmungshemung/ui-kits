@@ -60,6 +60,7 @@ export const stitchesTokens = {
       'height-md': '1.875rem',
       'height-lg': '2.5rem',
       'height-xl': '3.125rem',
+      'height-appbar': '5rem',
     },
     lineHeights: {
       base: '150%',
